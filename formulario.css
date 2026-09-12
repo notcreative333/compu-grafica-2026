@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f6f2f2;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #fefcfc;
+}
+
+.etiqueta-superior {
+  color: #1a56db;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.fila {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.campo {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.ayuda {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+.opcion {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.opcion input {
+  margin-right: 8px;
+}
+
+.archivo {
+  display: flex;
+  align-items: center;
+}
+
+.archivo input[type="file"] {
+  width: 100%;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.botones {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primario {
+  background-color: #1a56db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primario:hover {
+  background-color: #1543ad;
+}
+
+.btn-secundario {
+  background-color: white;
+  color: #1a56db;
+  border: 1px solid #1a56db;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-secundario:hover {
+  background-color: #f0f4ff;
+}
