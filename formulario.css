@@ -1,25 +1,44 @@
+
+:root {
+  --color-primario: #eb2525;
+  --color-primario-hover: #f34b56;
+  --color-texto: #fffefe;
+  --color-texto-suave: #898e93;
+  --color-borde: #d1d5db;
+  --color-fondo: #252424;
+  --color-error: #d33;
+  --radio-borde: 6px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f6f2f2;
-  color: #1a1a1a;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
   margin: 0;
   padding: 30px 0;
+  color-scheme: dark;
 }
 
-.contenedor {
-  max-width: 800px;
+.form-container {
+  max-width: 600px;
   margin: 0 auto;
   padding: 0 20px;
-  background-color: #fefcfc;
 }
 
-.etiqueta-superior {
-  color: #1a56db;
+.form-header {
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--color-primario);
   font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
   margin-bottom: 5px;
 }
 
@@ -29,34 +48,40 @@ h1 {
   margin-bottom: 10px;
 }
 
-.subtitulo {
-  color: #555;
+.form-header p {
+  color: var(--color-texto-suave);
   font-size: 14px;
-  margin-bottom: 25px;
+  margin: 0;
+}
+
+.required-mark {
+  color: var(--color-error);
 }
 
 h2 {
   font-size: 16px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-borde);
   padding-bottom: 8px;
   margin-top: 30px;
   margin-bottom: 15px;
 }
 
-.fila {
+.form-grid {
   display: flex;
   gap: 20px;
   margin-bottom: 15px;
 }
 
-.campo {
+.form-field {
   flex: 1;
   margin-bottom: 15px;
 }
 
 label {
+  display: block;
   font-size: 13px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -70,27 +95,35 @@ textarea {
   width: 100%;
   padding: 8px 10px;
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
+  font-family: inherit;
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primario);
 }
 
 textarea {
   resize: vertical;
-  font-family: inherit;
 }
 
-.ayuda {
+.field-help {
+  display: block;
   font-size: 12px;
-  color: #888;
+  color: var(--color-texto-suave);
   margin-top: 5px;
 }
 
 fieldset {
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
   padding: 15px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 legend {
@@ -99,60 +132,59 @@ legend {
   padding: 0 5px;
 }
 
-.opcion {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  margin-bottom: 8px;
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.opcion input {
-  margin-right: 8px;
-}
-
-.archivo {
+.choice {
   display: flex;
   align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 0;
 }
 
-.archivo input[type="file"] {
+input[type="file"] {
   width: 100%;
   font-size: 13px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
   padding: 5px;
 }
 
-.botones {
+.form-actions {
   margin-top: 25px;
   display: flex;
   gap: 10px;
 }
 
-.btn-primario {
-  background-color: #1a56db;
-  color: white;
+.button {
+  padding: 10px 20px;
+  border-radius: var(--radio-borde);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
 }
 
-.btn-primario:hover {
-  background-color: #1543ad;
+.button-primary:hover {
+  background-color: var(--color-primario-hover);
 }
 
-.btn-secundario {
-  background-color: white;
-  color: #1a56db;
-  border: 1px solid #1a56db;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
+.button-secondary {
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  border: 1px solid var(--color-primario);
 }
 
-.btn-secundario:hover {
-  background-color: #f0f4ff;
+.button-secondary:hover {
+  background-color: #eef2ff;
 }
