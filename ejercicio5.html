@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 5</title>
+<link rel="stylesheet" href="./ejercicio5.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+  <h1>Solicitud de soporte</h1>
+
+  <form>
+
+    <div class="campo">
+      <label for="prioridad">Prioridad</label>
+      <select id="prioridad" name="prioridad" required>
+        <option value="">Seleccione una prioridad</option>
+        <option value="baja">Baja</option>
+        <option value="media">Media</option>
+        <option value="alta">Alta</option>
+        <option value="urgente">Urgente</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="descripcion">Descripción del problema</label>
+      <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describe el problema con el mayor detalle posible..." required></textarea>
+    </div>
+
+    <div class="campo">
+      <label for="archivo">Adjuntar archivo (opcional)</label>
+      <input type="file" id="archivo" name="archivo">
+    </div>
+
+    <button type="submit" class="boton">Enviar solicitud</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>

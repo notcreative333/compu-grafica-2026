@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio 3</title>
+<link rel="stylesheet" href="./ejercicio3.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+  <h1>Encuesta de satisfacción</h1>
+
+  <form>
+
+    <fieldset>
+      <legend>¿Cómo calificarías el servicio?</legend>
+
+      <label class="opcion">
+        <input type="radio" name="calificacion" value="excelente" checked>
+        Excelente
+      </label>
+
+      <label class="opcion">
+        <input type="radio" name="calificacion" value="bueno">
+        Bueno
+      </label>
+
+      <label class="opcion">
+        <input type="radio" name="calificacion" value="regular">
+        Regular
+      </label>
+
+      <label class="opcion">
+        <input type="radio" name="calificacion" value="malo">
+        Malo
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Qué aspectos te gustaron?</legend>
+
+      <label class="opcion">
+        <input type="checkbox" name="aspectos" value="atencion">
+        Atención al cliente
+      </label>
+
+      <label class="opcion">
+        <input type="checkbox" name="aspectos" value="precio">
+        Precio
+      </label>
+
+      <label class="opcion">
+        <input type="checkbox" name="aspectos" value="rapidez">
+        Rapidez
+      </label>
+    </fieldset>
+
+    <div class="campo">
+      <label for="recomendacion">¿Qué tan probable es que nos recomiendes? (0 a 10)</label>
+      <input type="range" id="recomendacion" name="recomendacion" min="0" max="10" value="5">
+    </div>
+
+    <button type="submit" class="boton">Enviar encuesta</button>
+
+  </form>
+
+</div>
+
+</body>
+</html>
